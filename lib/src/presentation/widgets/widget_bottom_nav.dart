@@ -50,7 +50,7 @@ class _BottomNavigationWidgetState extends State<BottomNavigationWidget> {
             icon: Icon(Icons.discount),
           ),
           BottomNavigationBarItem(
-            label: "Favorite",
+            label: "My Items",
             icon: Icon(Icons.favorite_border),
           ),
           BottomNavigationBarItem(

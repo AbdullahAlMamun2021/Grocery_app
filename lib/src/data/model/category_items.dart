@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ProductCategory {
-  final String id;
+  final int id;
   final String tittle;
   final String imgUrl;
 

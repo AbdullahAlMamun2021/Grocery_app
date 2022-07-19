@@ -10,7 +10,7 @@ class CartScreen extends StatelessWidget {
       backgroundColor: Colors.white,
       appBar: AppBar(
         elevation: 0,
-        title: const Text("Order Details"),
+        title:  Text("Order Details",style: AppTextStyle.headline3(context, Colors.white),),
         centerTitle: true,
       ),
       body: Padding(

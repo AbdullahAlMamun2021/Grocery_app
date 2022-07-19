@@ -2,7 +2,6 @@ import 'package:e_commerce/src/data/provider/favourite_item.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-
 import 'src/presentation/widgets/widget_bottom_nav.dart';
 
 void main() {
@@ -16,14 +15,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
-      create: (ctx)=>Favourite(),
+      create: (ctx) => Favourite(),
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Grocery App',
         theme: ThemeData(
-          primarySwatch: Colors.teal,
-            iconTheme: IconThemeData(color: Colors.black.withOpacity(0.8))
-        ),
+            primarySwatch: Colors.teal,
+            iconTheme: IconThemeData(color: Colors.black.withOpacity(0.8))),
         home: const BottomNavigationWidget(),
       ),
     );
