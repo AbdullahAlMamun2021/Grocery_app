@@ -102,6 +102,7 @@ class ProductCategoryWidget extends StatelessWidget {
             },
             child: GridView.builder(
                 physics: const ScrollPhysics(),
+                scrollDirection: Axis.vertical,
                 shrinkWrap: true,
                 gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
                   maxCrossAxisExtent: 200,

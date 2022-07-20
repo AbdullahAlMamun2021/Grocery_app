@@ -1,12 +1,9 @@
-
+import 'package:e_commerce/src/presentation/screen/screen_login.dart';
 import 'package:e_commerce/src/utils/app_text_style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../widgets/more/widget_view_account.dart';
-
-
-
 
 class MoreScreen extends StatelessWidget {
   const MoreScreen({Key? key}) : super(key: key);
@@ -22,18 +19,21 @@ class MoreScreen extends StatelessWidget {
                 backgroundImage: NetworkImage(
                     "https://img.olympicchannel.com/images/image/private/t_1-1_600/f_auto/v1538355600/primary/wfrhxc0kh2vvq77sonki"),
               ),
-              title:  Text(
+              title: Text(
                 '+8801866062078',
-              style: AppTextStyle.subtitle(context, Colors.black),
+                style: AppTextStyle.subtitle(context, Colors.black),
               ),
               subtitle: InkWell(
                 onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (_) => const ViewAccountWidget()));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (_) => const ViewAccountWidget()));
                 },
-                child:  Text(
+                child: Text(
                   "View Account",
-                  style: AppTextStyle.caption(context, Colors.indigoAccent).copyWith(fontSize: 14,fontWeight: FontWeight.bold),
+                  style: AppTextStyle.caption(context, Colors.indigoAccent)
+                      .copyWith(fontSize: 14, fontWeight: FontWeight.bold),
                 ),
               ),
             ),
@@ -53,7 +53,7 @@ class MoreScreen extends StatelessWidget {
                   const SizedBox(
                     width: 20,
                   ),
-                   Text(
+                  Text(
                     'Manage Address',
                     style: AppTextStyle.subtitle(context, Colors.black),
                   ),
@@ -78,7 +78,7 @@ class MoreScreen extends StatelessWidget {
                   const SizedBox(
                     width: 20,
                   ),
-                   Text(
+                  Text(
                     'My Coupons',
                     style: AppTextStyle.subtitle(context, Colors.black),
                   ),
@@ -103,7 +103,7 @@ class MoreScreen extends StatelessWidget {
                   const SizedBox(
                     width: 20,
                   ),
-                   Text(
+                  Text(
                     'My Orders',
                     style: AppTextStyle.subtitle(context, Colors.black),
                   ),
@@ -128,7 +128,7 @@ class MoreScreen extends StatelessWidget {
                   const SizedBox(
                     width: 20,
                   ),
-                   Text(
+                  Text(
                     'Help and Contact',
                     style: AppTextStyle.subtitle(context, Colors.black),
                   ),
@@ -153,7 +153,7 @@ class MoreScreen extends StatelessWidget {
                   const SizedBox(
                     width: 20,
                   ),
-                   Text(
+                  Text(
                     'About',
                     style: AppTextStyle.subtitle(context, Colors.black),
                   ),
@@ -166,7 +166,7 @@ class MoreScreen extends StatelessWidget {
               child: Row(
                 children: [
                   Row(
-                    children:  [
+                    children: [
                       Icon(
                         Icons.privacy_tip_outlined,
                         color: Colors.grey,
@@ -185,7 +185,7 @@ class MoreScreen extends StatelessWidget {
             ),
             const Divider(thickness: 5),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+              padding: const EdgeInsets.symmetric(horizontal: 20,),
               child: Row(
                 children: [
                   SvgPicture.asset("assets/icons/Log out.svg",
@@ -193,8 +193,17 @@ class MoreScreen extends StatelessWidget {
                   const SizedBox(
                     width: 20,
                   ),
-                   Text("Logout",
-                    style: AppTextStyle.subtitle(context, Colors.black).copyWith(fontWeight: FontWeight.bold),),
+                  TextButton(
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (ctx) => LogInScreen()));
+                    },
+                    child: Text(
+                      "Logout",
+                      style: AppTextStyle.subtitle(context, Colors.black)
+                          .copyWith(fontWeight: FontWeight.bold),
+                    ),
+                  )
                 ],
               ),
             ),

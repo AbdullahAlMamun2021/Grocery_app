@@ -1,12 +1,12 @@
 import 'package:e_commerce/src/presentation/screen/screen_product_item_tabbar.dart';
 import 'package:e_commerce/src/utils/app_text_style.dart';
-import 'package:flutter/material.dart';
 
+import 'package:flutter/material.dart';
 import '../../data/model/category_items.dart';
 
 class CategoryScreen extends StatelessWidget {
   CategoryScreen({Key? key}) : super(key: key);
-  final List<ProductCategory> loadedCategory = [
+  final loadedCategory = <ProductCategory>[
     ProductCategory(
         id: 1,
         tittle: "Fruits & Vegetables",
@@ -156,10 +156,10 @@ class CategoryScreen extends StatelessWidget {
                             style: AppTextStyle.body(context, Colors.black),
                           ),
                           subtitle: const Padding(
+                            padding: EdgeInsets.only(top: 12.0),
                             child: Divider(
                               color: Colors.pink,
                             ),
-                            padding: EdgeInsets.only(top: 12.0),
                           ),
                         ),
                       ),
